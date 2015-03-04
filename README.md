@@ -1,7 +1,7 @@
 # portmonitoring
-A simple python based tool to verify a given ip address is reachable or not and check given ports are opened or closed. If closed, start the services
+A simple python based tool to verify a given ip address is reachable or not and check given ports are opened or closed. 
+If closed, restart the services binded on those ports.
 
-'''
 __author__ = 'santhosh'
 __Desc__ = IP and Port Monitor.
            1. Purpose of this IP Port Monitor is to identify and restart the 
@@ -20,5 +20,4 @@ __Desc__ = IP and Port Monitor.
 
            EX Usage: python testDriver.py -ip 10.10.10.10 -p 25 80
 __Version__ = 1.0
-__Input__ =  Cmd Line Arguments are IpAddress and Port List
-'''
+__Input__ =  Cmd Line Arguments IpAddress and Port List
