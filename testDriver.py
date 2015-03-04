@@ -27,8 +27,9 @@ if "__name__" != "__main__":
         port_monitor_obj = PortMonitor()
         try:
             if (port_monitor_obj.parseArgs(args.ip_address, args.port_list) != FAIL):
+                print "\n== Launching the Port Monitor Thread ===="  
                 t1 = threading.Thread(target=port_monitor_obj.startServices())
                 t1.start()
                 t1.join()
         except Exception, ex:
-            print "=== Exception Occurred. Please Check\n %s" % (ex)
+            print "=== Exception Occurred. Please Check %s ===" % (ex)

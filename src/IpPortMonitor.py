@@ -10,6 +10,7 @@ __Desc__ = IP and Port Monitor.
            4. If IP is reachable, verify mentioned ports are opened or not.
            5. Restart the services which are stopped on those ports.
            6. Uses the SSH service to connect to remote machine and start\stop the services.
+           7. Runs multiple Port monitor jobs in parallel
            
            ==== Source Code Info ===
            1. All Configuration information EX: username, password to connect to a remote machine,
@@ -36,6 +37,7 @@ class PortMonitor(object):
         self.__IPV6 = False
         self.__IPV4 = False
         self.__log_module = ScanLogger().getLogger()
+        self.__closed_port_lst = []
 
 
     def parseArgs(self, ip_address, port_list):
@@ -102,15 +104,24 @@ class PortMonitor(object):
         if not self.__closed_port_lst:
             #Read the port Service information
             temp = {}
+            print open(Cfg['port_service_info_file_path'],'r').readline()
             for lines in open(Cfg['port_service_info_file_path'],'r').readline():
                 if not lines.startswith('#'):
+                    print lines
                     line = lines.split(';')
+                    print line
                     temp[line[0]] = line[2]
             for ports in self.__closed_port_lst:
                 self.__services[ports] = temp[ports]
 
 
     def startServices(self):
+        #Retrieve all Service Paths from CSV file
+        self.__retrieveServicePaths()
+        self.__log_module.info("==Step1: Retrieving Default Port Service Info Successful ===")
+        #Verify Port Status for the input provided ports information
+        self.__verifyPortStatus() 
+        self.__log_module.info("==Step2: Retrieving Closed Port Status Info Successful ===")
         for port, service_paths in self.__services.items():
             ssh_client = SshClient(self.__ip_address)
             service_paths = service_paths.split(',')
