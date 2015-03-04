@@ -1,0 +1,49 @@
+#Port No; Service Info;Standard Service Path Information
+1;Port Service Multiplexer (TCPMUX);/etc/init.d/x
+5;Remote Job Entry (RJE);/etc/init.d/x
+7;ECHO;/etc/init.d/x
+18;Message Send Protocol (MSP);/etc/init.d/x
+20;FTP(Data);/etc/init.d/x
+21;FTP(Control);/etc/init.d/x
+22;SSH(Remote Login Protocol);/etc/init.d/x
+23;Telnet;/etc/init.d/xinetd; /etc/init.d/inetd
+25;Simple Mail Transfer Protocol(SMTP);/etc/init.d/postfix,/etc/init.d/sendmail
+29;MSG ICP;/etc/init.d/x
+37;Time;/etc/init.d/x
+42;Host Name Server (Nameserv);/etc/init.d/x
+43;WhoIs;/etc/init.d/x
+49;Login Host Protocol (Login);/etc/init.d/x
+53;Domain Name System(DNS);/etc/init.d/x
+69;Trivial File Transfer Protocol(TFTP);/etc/init.d/x
+70;GopherServices;/etc/init.d/x
+79;Finger;/etc/init.d/x
+80;HTTP;/etc/init.d/httpd,/etc/init.d/apache2
+103;X.400Standard;/etc/init.d/x
+108;SNA Gateway Access Server;/etc/init.d/x
+109;POP2;/etc/init.d/x
+110;POP3;/etc/init.d/x
+115;Simple File Transfer Protocol (SFTP);/etc/init.d/x
+118;SQL Services;/etc/init.d/x
+119;Newsgroup (NNTP);/etc/init.d/x
+137;NetBIOSName Service;/etc/init.d/x
+139;NetBIOS Datagram Service;/etc/init.d/x
+143;Interim Mail Access Protocol (IMAP);/etc/init.d/x
+150;NetBIOS Session Service;/etc/init.d/x
+156;SQL Server;/etc/init.d/x
+161;SNMP;/etc/init.d/x
+179;Border Gateway Protocol(BGP);/etc/init.d/x
+190;Gateway Access Control Protocol (GACP);/etc/init.d/x
+194;Internet Relay Chat(IRC);/etc/init.d/x
+197;Directory Location Service (DLS);/etc/init.d/x
+389;Lightweight Directory Access Protocol(LDAP);/etc/init.d/x
+396;Novell Netware over IP;/etc/init.d/x
+443;HTTPS;"/etc/init.d/httpd; /etc/init.d/apache2
+444;Simple Network Paging Protocol (SNPP);/etc/init.d/x
+445;Microsoft-DS;/etc/init.d/x
+458;AppleQuickTime;/etc/init.d/x
+546;DHCPClient;/etc/init.d/x
+547;DHCP Server;/etc/init.d/x
+563;SNEWS;/etc/init.d/x
+569;MSN;/etc/init.d/x
+1080;Socks;/etc/init.d/x
+
