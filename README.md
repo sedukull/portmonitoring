@@ -1,9 +1,9 @@
 # portmonitoring
 A simple python based tool to verify a given ip address is reachable or not.
-Check given ports are opened or closed on the machine. If closed, restart the services 
-binded on those ports.
+Check given ports are opened or closed on the machine. If ports are closed, 
+restart the services binded on those ports.
 
-__author__ : Santhosh
+__Author__ : Santhosh
 
 __Desc__ : IP and Port Monitor.
 
